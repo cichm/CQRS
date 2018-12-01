@@ -1,0 +1,21 @@
+{
+  "name": "cqrs",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "clamp": "^1.0.1",
+    "io-ts": "^1.4.2",
+    "is-url": "^1.2.4",
+    "uuid": "^3.3.2",
+    "jest": "^23.6.0",
+    "ts-jest": "^23.10.5",
+    "tslint": "^5.11.0",
+    "typescript": "^3.2.1",
+
+    "@types/jest": "^23.3.10",
+    "@eventuateinc/eventuate-nodejs-client": "latest"
+  }
+}

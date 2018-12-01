@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "outDir": "build",
+    "target": "es6",
+    "module": "commonjs",
+    "allowSyntheticDefaultImports": true,
+    "types": ["node", "jest"],
+    "allowJs": true,
+    "sourceMap": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "lib": [
+      "es5",
+      "es6",
+      "es2016.array.include",
+      "es2015.promise"
+    ]
+  },
+  "include": [
+    "./commandHandlers/**/*.ts",
+    "./domain/**/*.ts",
+    "./repositories/**/*.ts"
+  ],
+  "exclude": [
+    "./repositories/eventuate/*"
+  ]
+}
