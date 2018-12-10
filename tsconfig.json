@@ -5,7 +5,7 @@
     "target": "es6",
     "module": "commonjs",
     "allowSyntheticDefaultImports": true,
-    "types": ["node", "jest"],
+    "types": ["jest"],
     "allowJs": true,
     "sourceMap": true,
     "noUnusedLocals": true,
@@ -18,11 +18,11 @@
     ]
   },
   "include": [
-    "./commandHandlers/**/*.ts",
-    "./domain/**/*.ts",
-    "./repositories/**/*.ts"
+    "./body/commandHandlers/**/*.ts",
+    "./body/domain/**/*.ts",
+    "./body/repositories/**/*.ts"
   ],
   "exclude": [
-    "./repositories/eventuate/*"
+    "./body/repositories/eventuate/*"
   ]
 }

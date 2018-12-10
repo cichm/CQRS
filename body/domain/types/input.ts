@@ -1,20 +1,16 @@
 import * as t from 'io-ts'
 
 export const NonNegativeInt = t.refinement(t.Integer, num => num >= 0);
-export const Email = t.refinement(t.string, () => true);
 export const After2017 = t.refinement(t.Integer, val => val > 1483228800000);
 
-export const UserId = brand(t.string, 'UserId');
+export const GamerId = brand(t.string, 'GamerId');
+export const GameId = brand(t.string, 'GameId');
+export const NewsletterId = brand(t.string, 'NewsletterId');
 export const Timestamp = brand(After2017, 'Timestamp');
-export const EmployeeId = brand(t.string, 'EmployeeId');
 
-export const UserInfo = t.partial({
-    beenionId: UserId,
-    email: Email
-});
-
-
-export const RankRange = t.type({ position: t.Integer });
+const Min = t.type({ min: t.Integer });
+const Max = t.partial({ max: NonNegativeInt });
+export const RankRange = t.intersection([ Min, Max ]);
 
 // helper function for creating nominal type in TS
 // by using intersection with { __brand: Type }
