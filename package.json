@@ -29,7 +29,6 @@
   "dependencies": {
     "@eventuateinc/eventuate-nodejs-client": "^1.0.25",
     "@types/jest": "^23.3.10",
-    "clamp": "^1.0.1",
     "io-ts": "^1.4.2",
     "is-url": "^1.2.4",
     "jest": "^23.6.0",

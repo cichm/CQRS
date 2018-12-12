@@ -1,4 +1,12 @@
-import {RankRange, GamerEvent} from "../index";
+import {
+    RankRange,
+    GamerEvent,
+    NewsletterId,
+    GamerInfo,
+    NewsletterPermission,
+    NewsletterPrivilege,
+    StageRule
+} from "../index";
 
 export type RankCalcParams = {
     events: {
@@ -10,4 +18,19 @@ export type RankCalcParams = {
         group: string
         rankRange: RankRange
     }[]
+}
+
+export type Newsletter = {
+    newsletterId: NewsletterId
+    privileges: NewsletterPrivilegeConditions
+    rankCalcParams: RankCalcParams
+    editors: {
+        invited: GamerInfo[]
+        confirmed: GamerInfo[]
+    }
+    stageRules: StageRule[]
+}
+
+export type NewsletterPrivilegeConditions = {
+    [Privilege in NewsletterPrivilege]: NewsletterPermission
 }

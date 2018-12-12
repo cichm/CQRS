@@ -7,3 +7,9 @@ export type RankEvent = {
     gameId?: GameId
     voterId?: GamerId
 }
+
+export type Gamer = {
+    gamerId: GamerId
+    mergedGamerIds: GamerId[]
+    rankEvents: RankEvent[]
+}

@@ -6,6 +6,12 @@ const calcRank = (rankEvents: RankEvent[], rankCalcParams: RankCalcParams): numb
         return 0
     }
 
+    const clamp = (value, min, max) => {
+        return min < max
+            ? (value < min ? min : value > max ? max : value)
+            : (value < max ? max : value > min ? min : value)
+    };
+
     const sumPerGroup = rankCalcParams.events.reduce(
         (sum, { group, factor, eventType }) => {
             const timesOccured = rankEvents.filter(e => e.eventType === eventType).length
@@ -17,13 +23,6 @@ const calcRank = (rankEvents: RankEvent[], rankCalcParams: RankCalcParams): numb
         },
         {}
     );
-
-    const clamp = (value, min, max) => {
-        return min < max
-            ? (value < min ? min : value > max ? max : value)
-            : (value < max ? max : value > min ? min : value)
-    };
-
 
     return Object.keys(sumPerGroup).reduce((sum, group) => {
         const groupCalcParams = rankCalcParams.groups.find(p => p.group === group)
