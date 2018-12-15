@@ -35,6 +35,10 @@
     "ts-jest": "^23.10.5",
     "tslint": "^5.11.0",
     "typescript": "^3.2.1",
-    "uuid": "^3.3.2"
+    "uuid": "^3.3.2",
+    "mongoose": "^5.4.0"
+  },
+  "devDependencies": {
+    "@types/mongoose": "^5.3.5"
   }
 }

@@ -1,5 +1,6 @@
 import * as input from './input'
 import * as gameCommands from './game/commands'
+import * as gamerCommands from './gamer/commands'
 import { TypeOf } from 'io-ts';
 import { GamerEvent as GamerEventIo } from './gamer/events';
 import { GameEvent as GameEventIo } from './game/events';
@@ -24,6 +25,9 @@ export type BeenionPermission = TypeOf<typeof input.BeenionPermission>
 export type PrivateGameCommands = TypeOf<typeof gameCommands.privateCommands>
 export type PublicGameCommands = TypeOf<typeof gameCommands.publicCommands>
 export type GameCommands = PrivateGameCommands & PublicGameCommands
+
+export type PublicGamerCommands = TypeOf<typeof gamerCommands.publicCommands>
+export type GamerCommands = PublicGamerCommands
 
 // event types
 export type GamerEvent = TypeOf<typeof GamerEventIo>
