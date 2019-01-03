@@ -1,5 +1,5 @@
-import {literal, type, union} from "io-ts";
 import * as input from '../input';
+import { literal, type, union } from "io-ts";
 
 export const GamerEvent = union([
     type({

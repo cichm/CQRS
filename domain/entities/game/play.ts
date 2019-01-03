@@ -4,7 +4,7 @@ import errors from "../../errors";
 
 export function playGame(
     gamer: t.Gamer,
-    newsletter: t.NewsletterId,
+    newsletter: t.Newsletter,
     gameId: t.GameId,
     timestamp: t.Timestamp
 ): t.GameEvent[] {

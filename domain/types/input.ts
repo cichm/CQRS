@@ -59,6 +59,6 @@ export const StageRules = t.array(StageRule);
 function brand<T, B extends string> (
     type: t.Type<any, T>,
     _brand: B
-): t.Type<any, T & { __brand: B }> {
+): t.Type<any, T /*& { __brand: B }*/> {
     return type as any
 }

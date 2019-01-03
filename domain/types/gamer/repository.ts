@@ -1,4 +1,4 @@
-import {Gamer, GamerEvent, GamerId} from '../index'
+import { Gamer, GamerEvent, GamerId } from '../index'
 
 export type GamerRepository = {
     getById: (id: GamerId) => Promise<{

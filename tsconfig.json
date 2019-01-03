@@ -10,6 +10,8 @@
     "sourceMap": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
     "lib": [
       "es5",
       "es6",
@@ -18,11 +20,11 @@
     ]
   },
   "include": [
-    "./body/commandHandlers/**/*.ts",
-    "./body/domain/**/*.ts",
-    "./body/repositories/**/*.ts"
+    "./commandHandlers/**/*.ts",
+    "./domain/**/*.ts",
+    "./repositories/**/*.ts"
   ],
   "exclude": [
-    "./body/repositories/eventuate/*"
+    "./repositories/eventuate/*"
   ]
 }
