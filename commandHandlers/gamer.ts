@@ -1,5 +1,5 @@
 import * as t from '../domain/types';
-import {createGamer} from "../domain/entities/gamer/create";
+import { createGamer } from "../domain/entities/gamer/create";
 
 type CommandHandlers = {
     [C in keyof t.GamerCommands]: (

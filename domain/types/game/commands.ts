@@ -1,4 +1,4 @@
-import {type} from "io-ts";
+import { type } from "io-ts";
 import * as input from '../input'
 
 export const privateCommands = type({
